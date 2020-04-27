@@ -74,7 +74,7 @@ public class CalculadoraTest {
 		assertThat(resultadoEsperado, equalTo(resultadoEjecucion));
 	}
 	
-	 @Test(expected = ArithmeticException.class)
+	@Test(expected = ArithmeticException.class)
 	 public void dividirEntreCero()
 	 {
 		 float resultadoEjecucion = miCalculadora.divide(10, 0);
