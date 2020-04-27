@@ -19,26 +19,64 @@ public class CalculadoraTest {
 
 	@Test
 	public void sumaPositivosTest() {
-		//Llamar al cÃ³digo
-		float resultadoEsperado = 6;
-		float resultadoEjecucion = miCalculadora.suma(2, 4);
+		
+		//Llamar al código
+		float resultadoEsperado = 10;
+		float resultadoEjecucion = miCalculadora.suma(4, 6);
 		//Verificar
 		assertThat(resultadoEsperado, equalTo(resultadoEjecucion));
 	}
 	
 	@Test
 	public void sumaConCeroTest() {
-		//Llamar al cÃ³digo
+		//Llamar al código
 		float resultadoEsperado = 4;
-		float resultadoEjecucion = miCalculadora.suma(0,4);
+		float resultadoEjecucion = miCalculadora.suma(0, 4);
 	
 		//Verificar
-		assertThat(resultadoEsperado,equalTo(resultadoEjecucion));
+		assertThat(resultadoEsperado, equalTo(resultadoEjecucion));
+		
 	}
+	
+	@Test
+	public void multiplicacionConCero() {
+		
+		float resultadoEsperado = 0;
+		float resultadoEjecucion = miCalculadora.multiplica(0, 4);
+		
+		assertThat(resultadoEsperado, equalTo(resultadoEjecucion));
+	}
+	
+	@Test
+	public void multiplicacionPositivos() {
+		
+		float resultadoEsperado = 6;
+		float resultadoEjecucion = miCalculadora.multiplica(3, 2);
+		
+		assertThat(resultadoEsperado, equalTo(resultadoEjecucion));
+	}
+	
+	@Test
+	public void DivideConCero() {
+		
+		float resultadoEsperado = 0;
+		float resultadoEjecucion = miCalculadora.divide(0, 2);
+		
+		assertThat(resultadoEsperado, equalTo(resultadoEjecucion));
+	}
+	
+	@Test
+	public void DividePositivos() {
+		
+		float resultadoEsperado = 2;
+		float resultadoEjecucion = miCalculadora.divide(6, 3);
+		
+		assertThat(resultadoEsperado, equalTo(resultadoEjecucion));
+	}
+	
 	
 	@After
 	public void tearDown(){
 		System.out.println("Prueba terminada!");
 	}
-
 }
