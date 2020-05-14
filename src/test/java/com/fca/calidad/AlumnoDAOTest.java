@@ -72,7 +72,4 @@ public class AlumnoDAOTest {
 		assertThat(resultadoEsperado, equalTo(resultadoEjecucion));
 	}
 	
-	
-	
-
 }
